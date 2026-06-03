@@ -1,65 +1,117 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-neutral-950 text-white">
+      <section className="px-6 py-20 max-w-6xl mx-auto">
+        <p className="text-orange-400 font-semibold mb-4">
+          Private Event Venue in Bradford
+        </p>
+
+        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          Banya Malina
+        </h1>
+
+        <p className="text-xl text-neutral-300 max-w-2xl mb-8">
+          A private venue for birthdays, parties, family gatherings and
+          celebrations. Enjoy indoor seating, billiards, outdoor chill space,
+          BBQ/mangal area, jacuzzi and on-site parking.
+        </p>
+
+        <div className="flex gap-4 flex-wrap">
+          <a
+            href="tel:+447393634552"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold"
+          >
+            Call to Book
+          </a>
+
+          <a
+            href="#booking"
+            className="border border-neutral-600 hover:border-white px-6 py-3 rounded-xl font-semibold"
+          >
+            Booking Enquiry
+          </a>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 bg-neutral-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Perfect For</h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              "Birthday Parties",
+              "Private Parties",
+              "Family Gatherings",
+              "Friends Nights",
+              "Celebrations",
+              "Relaxed Get-Togethers",
+            ].map((item) => (
+              <div
+                key={item}
+                className="bg-neutral-800 p-6 rounded-2xl border border-neutral-700"
+              >
+                <h3 className="text-xl font-semibold">{item}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8">Facilities</h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            "Indoor seating area",
+            "Billiards table",
+            "Private outdoor chill space",
+            "Outdoor jacuzzi",
+            "BBQ / mangal area",
+            "On-site parking",
+          ].map((item) => (
+            <div key={item} className="bg-neutral-900 p-6 rounded-2xl">
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-6 py-16 bg-neutral-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">Optional Extras</h2>
+
+          <p className="text-neutral-300 max-w-2xl">
+            Sauna access is available as an optional add-on. The sauna area is
+            located in a separate locked room and can be added to your booking
+            for an additional price.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      <section id="booking" className="px-6 py-16 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">Booking Enquiry</h2>
+
+        <p className="text-neutral-300 mb-8 max-w-2xl">
+          A £200 deposit is required to secure your booking. Final price depends
+          on the date, group size, event type and any extras selected.
+        </p>
+
+        <div className="bg-neutral-900 p-6 rounded-2xl border border-neutral-700 max-w-2xl">
+          <p className="mb-4">To make a booking enquiry, call us:</p>
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+447393634552"
+            className="text-2xl font-bold text-orange-400"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            07393 634552
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <footer className="px-6 py-10 border-t border-neutral-800 text-center text-neutral-400">
+        <p>Banya Malina · Bradford</p>
+        <p>07393 634552</p>
+      </footer>
+    </main>
   );
 }
