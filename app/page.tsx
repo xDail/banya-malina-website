@@ -6,7 +6,7 @@ const phoneDisplay = "07393 634552";
 const phoneHref = "tel:+447393634552";
 const whatsappNumber = "447393634552";
 
-const eventTypes = [
+const events = [
   "Birthday parties",
   "Private parties",
   "Family gatherings",
@@ -63,47 +63,46 @@ ${form.message}
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
-      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/40 backdrop-blur-xl">
+    <main className="min-h-screen overflow-hidden bg-[#030102] text-white">
+      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/45 backdrop-blur-2xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <a href="#" className="font-display text-2xl font-bold tracking-wide">
-            Banya <span className="text-orange-400">Malina</span>
+            Banya <span className="gold-text">Malina</span>
           </a>
 
           <nav className="hidden items-center gap-8 text-sm text-neutral-300 md:flex">
-            <a className="hover:text-orange-400" href="#events">Events</a>
-            <a className="hover:text-orange-400" href="#facilities">Facilities</a>
-            <a className="hover:text-orange-400" href="#gallery">Gallery</a>
-            <a className="hover:text-orange-400" href="#booking">Booking</a>
+            <a className="transition hover:text-rose-300" href="#events">Events</a>
+            <a className="transition hover:text-rose-300" href="#facilities">Facilities</a>
+            <a className="transition hover:text-rose-300" href="#gallery">Gallery</a>
+            <a className="transition hover:text-rose-300" href="#booking">Booking</a>
           </nav>
 
           <a
             href={phoneHref}
-            className="rounded-full bg-orange-500 px-5 py-2.5 text-sm font-bold shadow-lg shadow-orange-500/30 transition hover:scale-105 hover:bg-orange-400"
+            className="rounded-full bg-rose-700 px-5 py-2.5 text-sm font-bold shadow-lg shadow-rose-900/40 transition hover:scale-105 hover:bg-rose-600"
           >
             Call Now
           </a>
         </div>
       </header>
 
-      <section className="hero-bg relative px-6 pb-24 pt-36 md:pt-44">
-        <div className="absolute right-10 top-32 h-72 w-72 rounded-full bg-orange-500/20 blur-3xl" />
-        <div className="absolute bottom-10 left-10 h-72 w-72 rounded-full bg-yellow-500/10 blur-3xl" />
+      <section className="hero-premium relative px-6 pb-28 pt-36 md:pt-44">
+        <div className="absolute right-0 top-28 h-96 w-96 rounded-full bg-rose-700/20 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-fuchsia-950/40 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-2">
           <div className="animate-fade-up">
-            <p className="mb-5 inline-flex rounded-full border border-orange-400/30 bg-orange-400/10 px-4 py-2 text-sm font-semibold text-orange-300">
+            <p className="mb-5 inline-flex rounded-full border border-rose-300/25 bg-rose-950/40 px-5 py-2 text-sm font-semibold text-rose-200">
               Private Event & Party Venue in Bradford
             </p>
 
-            <h1 className="font-display mb-6 text-5xl font-bold leading-tight md:text-7xl">
-              Your private space for{" "}
-              <span className="text-orange-400">parties</span>, birthdays &
-              celebrations.
+            <h1 className="font-display mb-7 text-5xl font-bold leading-tight md:text-7xl">
+              Private venue for{" "}
+              <span className="gold-text">birthdays, parties</span> & nights to remember.
             </h1>
 
-            <p className="mb-8 max-w-2xl text-lg leading-8 text-neutral-300">
-              Banya Malina is a private venue in Bradford for birthdays,
+            <p className="mb-9 max-w-2xl text-lg leading-8 text-neutral-300">
+              Banya Malina is a private event space in Bradford for birthdays,
               parties, family gatherings and relaxed nights with friends. Enjoy
               indoor seating, billiards, outdoor chill space, jacuzzi, BBQ/mangal
               area and on-site parking.
@@ -112,14 +111,14 @@ ${form.message}
             <div className="flex flex-wrap gap-4">
               <a
                 href="#booking"
-                className="rounded-full bg-orange-500 px-8 py-4 font-bold shadow-xl shadow-orange-500/30 transition hover:scale-105 hover:bg-orange-400"
+                className="rounded-full bg-rose-700 px-8 py-4 font-bold shadow-xl shadow-rose-900/40 transition hover:scale-105 hover:bg-rose-600"
               >
                 Make Booking Enquiry
               </a>
 
               <a
                 href={phoneHref}
-                className="rounded-full border border-white/20 bg-white/5 px-8 py-4 font-bold backdrop-blur transition hover:scale-105 hover:border-orange-400"
+                className="rounded-full border border-white/15 bg-white/5 px-8 py-4 font-bold backdrop-blur transition hover:scale-105 hover:border-rose-300"
               >
                 {phoneDisplay}
               </a>
@@ -127,18 +126,23 @@ ${form.message}
           </div>
 
           <div className="animate-float-slow">
-            <div className="glass rounded-[2rem] p-6 shadow-2xl shadow-orange-500/10">
-              <div className="flex h-[430px] flex-col justify-end rounded-[1.5rem] bg-gradient-to-br from-neutral-800 via-neutral-900 to-black p-8">
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">
-                  Bradford
-                </p>
-                <h2 className="font-display text-4xl font-bold">
-                  Private venue with indoor & outdoor space
-                </h2>
-                <p className="mt-4 text-neutral-300">
-                  Photos coming soon. This area will be replaced with real venue
-                  images later.
-                </p>
+            <div className="glass-premium rounded-[2rem] p-5">
+              <div className="relative flex h-[450px] flex-col justify-end overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-[#2a0611] via-[#0b0205] to-black p-8">
+                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-rose-600/25 blur-3xl" />
+                <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-fuchsia-900/30 blur-3xl" />
+
+                <div className="relative">
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-rose-200">
+                    Bradford
+                  </p>
+                  <h2 className="font-display text-4xl font-bold">
+                    Premium private indoor & outdoor space
+                  </h2>
+                  <p className="mt-4 text-neutral-300">
+                    Real venue photos will go here later. This section is ready
+                    for a luxury hero image.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -147,21 +151,22 @@ ${form.message}
 
       <section id="events" className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-orange-400">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-rose-300">
             Events
           </p>
-          <h2 className="font-display mb-10 text-4xl font-bold md:text-5xl">
-            Perfect for private gatherings
+
+          <h2 className="font-display mb-12 text-4xl font-bold md:text-5xl">
+            Made for private celebrations
           </h2>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {eventTypes.map((item) => (
+            {events.map((item) => (
               <div
                 key={item}
-                className="glass group rounded-3xl p-8 transition duration-300 hover:-translate-y-2 hover:border-orange-400/50"
+                className="glass-premium group rounded-3xl p-8 transition duration-300 hover:-translate-y-2 hover:border-rose-300/50"
               >
-                <div className="mb-6 h-12 w-12 rounded-2xl bg-orange-500/20" />
-                <h3 className="text-2xl font-bold group-hover:text-orange-300">
+                <div className="mb-7 h-12 w-12 rounded-2xl bg-gradient-to-br from-rose-800 to-rose-400 shadow-lg shadow-rose-950/50" />
+                <h3 className="text-2xl font-bold transition group-hover:text-rose-200">
                   {item}
                 </h3>
               </div>
@@ -170,85 +175,87 @@ ${form.message}
         </div>
       </section>
 
-      <section id="facilities" className="bg-neutral-950 px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-orange-400">
-                Facilities
-              </p>
-              <h2 className="font-display mb-6 text-4xl font-bold md:text-5xl">
-                Everything you need for a good night
-              </h2>
-              <p className="text-lg leading-8 text-neutral-300">
-                The main focus is private events and parties. Sauna access is
-                available separately as an optional add-on in a locked room.
-              </p>
-            </div>
+      <section id="facilities" className="bg-[#070204] px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
+          <div>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-rose-300">
+              Facilities
+            </p>
 
-            <div className="grid gap-4">
-              {facilities.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-lg font-semibold transition hover:border-orange-400/50 hover:bg-orange-500/10"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
+            <h2 className="font-display mb-6 text-4xl font-bold md:text-5xl">
+              Everything for a proper private night
+            </h2>
+
+            <p className="text-lg leading-8 text-neutral-300">
+              The main focus is events, parties and private gatherings. Sauna
+              access is available separately as an optional add-on in a locked room.
+            </p>
           </div>
-        </div>
-      </section>
 
-      <section id="gallery" className="px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-orange-400">
-            Gallery
-          </p>
-          <h2 className="font-display mb-10 text-4xl font-bold md:text-5xl">
-            Photos coming soon
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((item) => (
+          <div className="grid gap-4">
+            {facilities.map((item) => (
               <div
                 key={item}
-                className="flex h-72 items-center justify-center rounded-3xl border border-dashed border-white/20 bg-gradient-to-br from-neutral-900 to-black text-neutral-400"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-lg font-semibold transition hover:border-rose-300/50 hover:bg-rose-950/30"
               >
-                Venue photo {item}
+                {item}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="booking" className="bg-neutral-950 px-6 py-24">
+      <section id="gallery" className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-rose-300">
+            Gallery
+          </p>
+
+          <h2 className="font-display mb-12 text-4xl font-bold md:text-5xl">
+            Venue photos coming soon
+          </h2>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {[1, 2, 3].map((item) => (
+              <div
+                key={item}
+                className="flex h-72 items-center justify-center rounded-3xl border border-dashed border-rose-200/20 bg-gradient-to-br from-[#210610] via-[#080204] to-black text-neutral-400"
+              >
+                Photo placeholder {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" className="bg-[#070204] px-6 py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-orange-400">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-rose-300">
               Booking
             </p>
+
             <h2 className="font-display mb-6 text-4xl font-bold md:text-5xl">
               Send a booking enquiry
             </h2>
-            <p className="mb-6 text-lg leading-8 text-neutral-300">
+
+            <p className="mb-8 text-lg leading-8 text-neutral-300">
               A £200 deposit is required to secure your booking. Final price
-              depends on the date, group size, event type and any extras
-              selected.
+              depends on the date, group size, event type and any extras selected.
             </p>
 
-            <div className="glass rounded-3xl p-8">
+            <div className="glass-premium rounded-3xl p-8">
               <p className="mb-2 text-neutral-400">Location</p>
               <p className="mb-6 text-2xl font-bold">Bradford</p>
 
               <p className="mb-2 text-neutral-400">Phone</p>
-              <a href={phoneHref} className="text-3xl font-bold text-orange-400">
+              <a href={phoneHref} className="text-3xl font-bold text-rose-300">
                 {phoneDisplay}
               </a>
             </div>
           </div>
 
-          <form onSubmit={submitBooking} className="glass rounded-3xl p-8">
+          <form onSubmit={submitBooking} className="glass-premium rounded-3xl p-8">
             <Input label="Name" value={form.name} onChange={(v) => updateField("name", v)} />
             <Input label="Phone number" value={form.phone} onChange={(v) => updateField("phone", v)} />
             <Input label="Preferred date" type="date" value={form.date} onChange={(v) => updateField("date", v)} />
@@ -281,13 +288,13 @@ ${form.message}
               <textarea
                 value={form.message}
                 onChange={(e) => updateField("message", e.target.value)}
-                className="h-32 w-full rounded-2xl border border-white/10 bg-black/30 p-4 outline-none transition focus:border-orange-400"
+                className="h-32 w-full rounded-2xl border border-white/10 bg-black/35 p-4 outline-none transition focus:border-rose-300"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full rounded-full bg-orange-500 px-8 py-4 font-bold shadow-xl shadow-orange-500/30 transition hover:scale-[1.02] hover:bg-orange-400"
+              className="w-full rounded-full bg-rose-700 px-8 py-4 font-bold shadow-xl shadow-rose-950/50 transition hover:scale-[1.02] hover:bg-rose-600"
             >
               Send Enquiry on WhatsApp
             </button>
@@ -323,7 +330,7 @@ function Input({
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full rounded-2xl border border-white/10 bg-black/30 p-4 outline-none transition focus:border-orange-400"
+        className="w-full rounded-2xl border border-white/10 bg-black/35 p-4 outline-none transition focus:border-rose-300"
       />
     </div>
   );
@@ -348,7 +355,7 @@ function Select({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full rounded-2xl border border-white/10 bg-black/30 p-4 outline-none transition focus:border-orange-400"
+        className="w-full rounded-2xl border border-white/10 bg-black/35 p-4 outline-none transition focus:border-rose-300"
       >
         {options.map((option) => (
           <option key={option}>{option}</option>
